@@ -1,0 +1,24 @@
+#server:
+#  port: 8083
+logging:
+  level:
+    root: INFO
+    com.votela.ds.authserver: DEBUG
+    org.springframework.web: DEBUG
+
+spring:
+  datasource:
+    username: votlaadmin
+    password: votelaadmin001_
+    url: jdbc:sqlserver://votela.database.windows.net:1433;databaseName=VotelaOAuth
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+  jpa:
+    database-platform: org.hibernate.dialect.SQLServerDialect
+
+keycloak:
+  server:
+    contextPath: /auth
+    adminUser:
+      username: votela-admin
+      password: pass
+    realmImportFile: votela-realm.json
