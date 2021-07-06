@@ -96,13 +96,13 @@
 	},
 	"connectionsJpa": {
 		"default": {
-			"url": "${keycloak.connectionsJpa.url:jdbc:sqlserver://votela.database.windows.net:1433;databaseName=VotelaOAuth}",
+			"url": "${keycloak.connectionsJpa.url:jdbc:sqlserver://votela.database.windows.net:1433;databaseName=VotelaOAuth;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;}",
 			"driver": "${keycloak.connectionsJpa.driver:com.microsoft.sqlserver.jdbc.SQLServerDriver}",
 			"driverDialect": "${keycloak.connectionsJpa.driverDialect:org.hibernate.dialect.SQLServerDialect}",
 			"user": "${keycloak.connectionsJpa.user:votlaadmin}",
 			"password": "${keycloak.connectionsJpa.password:votelaadmin001_}",
 			"initializeEmpty": false,
-			"migrationStrategy": "update",
+			"migrationStrategy": "manual",
 			"showSql": "${keycloak.connectionsJpa.showSql:false}",
 			"formatSql": "${keycloak.connectionsJpa.formatSql:false}",
 			"globalStatsInterval": "${keycloak.connectionsJpa.globalStatsInterval:-1}"

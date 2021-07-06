@@ -3,14 +3,14 @@
 logging:
   level:
     root: INFO
-    com.votela.ds.authserver: DEBUG
+    com.votela.ds.authserver.config: DEBUG
     org.springframework.web: DEBUG
 
 spring:
   datasource:
     username: votlaadmin
     password: votelaadmin001_
-    url: jdbc:sqlserver://votela.database.windows.net:1433;databaseName=VotelaOAuth
+    url: jdbc:sqlserver://votela.database.windows.net:1433;databaseName=VotelaOAuth;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;
     driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
   jpa:
     database-platform: org.hibernate.dialect.SQLServerDialect
