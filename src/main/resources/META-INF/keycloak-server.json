@@ -102,7 +102,7 @@
 			"user": "${keycloak.connectionsJpa.user:votlaadmin}",
 			"password": "${keycloak.connectionsJpa.password:votelaadmin001_}",
 			"initializeEmpty": false,
-			"migrationStrategy": "manual",
+			"migrationStrategy": "update",
 			"showSql": "${keycloak.connectionsJpa.showSql:false}",
 			"formatSql": "${keycloak.connectionsJpa.formatSql:false}",
 			"globalStatsInterval": "${keycloak.connectionsJpa.globalStatsInterval:-1}"
